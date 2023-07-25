@@ -1,10 +1,10 @@
 import "./main.css";
-import { Navbar } from "../../layout/";
+import { Navbar, Posts } from "../../layout/";
 export const Main = () => {
   return (
-    <div>
+    <div className="Main">
       <Navbar />
-      <h1>Main Page</h1>
+      <Posts />
     </div>
   );
 };

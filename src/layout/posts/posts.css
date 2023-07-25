@@ -1,0 +1,8 @@
+.Posts {
+  width: 100%;
+  height: calc(100vh - 80px);
+  background-color: #fff4e3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
