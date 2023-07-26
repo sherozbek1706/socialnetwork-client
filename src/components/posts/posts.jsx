@@ -1,17 +1,39 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { api } from "../../shared/url";
 import "./posts.css";
 import { axiosInstance } from "../../services";
 export const Posts = () => {
+  const myRef = useRef();
   const [data_posts, setData_posts] = useState([]);
+  const [offset, setOffset] = useState(0);
   useEffect(() => {
-    axiosInstance.get("/posts").then((res) => {
-      setData_posts(res.data.data);
-      console.log(res.data.data);
-    });
+    const fetchData = async () => {
+      axiosInstance.get(`/posts?limit=5&offset=${offset}`).then((res) => {
+        setData_posts((pre) => [...pre, ...res.data.data]);
+        console.log(res.data.data);
+      });
+    };
+
+    fetchData();
+  }, [offset]);
+
+  useEffect(() => {
+    const handleScroll = (e) => {
+      const scrollHeight = e.target.documentElement.scrollHeight;
+      const currentHeight =
+        e.target.documentElement.scrollTop + window.innerHeight;
+
+      if (currentHeight + 20 >= scrollHeight) {
+        setOffset(offset + 5);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
   return (
-    <div className="Posts__mini">
+    <div className="Posts__mini" ref={myRef}>
       {data_posts.map((post) => (
         <div className="Posts__mini__post" key={post._id}>
           <div className="img_content">
