@@ -3,6 +3,7 @@ import { AiFillHome, AiOutlineUserAdd } from "react-icons/ai";
 import { HiDocumentText } from "react-icons/hi";
 import { FaUsers } from "react-icons/fa";
 import { BiSolidLogIn } from "react-icons/bi";
+import { Link } from "react-router-dom";
 export const Navbar = () => {
   return (
     <div className="Navbar">
@@ -20,10 +21,10 @@ export const Navbar = () => {
           <FaUsers className="nav__icon" />
           Users
         </a>
-        <a href="#" className="Navbar__link">
+        <Link to="/login" className="Navbar__link">
           <BiSolidLogIn className="nav__icon" />
           Login
-        </a>
+        </Link>
         <a href="#" className="Navbar__link">
           <AiOutlineUserAdd className="nav__icon" />
           Register
