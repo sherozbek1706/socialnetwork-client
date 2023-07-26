@@ -5,8 +5,6 @@ import { axiosInstance } from "../../services";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 export const Login = () => {
-  // const [username, setUsername] = useState("");
-  // const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
   const usernameRef = useRef(null);
