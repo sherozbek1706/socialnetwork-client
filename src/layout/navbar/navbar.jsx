@@ -12,10 +12,10 @@ export const Navbar = () => {
           <AiFillHome className="nav__icon" />
           Home
         </a>
-        <a href="#" className="Navbar__link">
+        {/* <a href="#" className="Navbar__link">
           <HiDocumentText className="nav__icon" />
           Posts
-        </a>
+        </a> */}
         <a href="#" className="Navbar__link">
           <FaUsers className="nav__icon" />
           Users
