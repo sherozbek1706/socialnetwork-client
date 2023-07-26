@@ -71,6 +71,15 @@ import "./posts.css";
 import "./loader.css";
 import { axiosInstance } from "../../services";
 import InfiniteScroll from "react-infinite-scroll-component";
+import { AiOutlineLink, AiOutlineShareAlt } from "react-icons/ai";
+import { BiLike } from "react-icons/bi";
+
+import image1 from "../../../public/ghost_icon/1.jpg";
+import image2 from "../../../public/ghost_icon/2.jpg";
+import image3 from "../../../public/ghost_icon/3.jpg";
+import image4 from "../../../public/ghost_icon/4.jpg";
+import image5 from "../../../public/ghost_icon/5.jpg";
+
 export const Posts = () => {
   const [data_posts, setData_posts] = useState([]);
   const [offset, setOffset] = useState(0);
@@ -85,7 +94,6 @@ export const Posts = () => {
           console.log("ok");
           setHasMore(false);
         }
-        // console.log(data.length);
       } catch (error) {
         console.log(error);
       }
@@ -118,16 +126,19 @@ export const Posts = () => {
         {data_posts.map((post) => (
           <div className="Posts__mini__post" key={post._id}>
             <div className="Posts__mini__profile">
-              <h2>
-                {post.user_id.first_name} {post.user_id.last_name}{" "}
-                {post.user_id.haveStar ? (
-                  <i className="fa-solid fa-star"></i>
-                ) : null}
-              </h2>
-              <p>
-                {new Date(post.created_at).toDateString()}{" "}
-                {new Date(post.created_at).toTimeString().substring(0, 9)}
-              </p>
+              <img src={image1} className="Posts__mini__primages" alt="" />
+              <div className="Posts__mini__linkusername">
+                <h2>
+                  {post.user_id.first_name} {post.user_id.last_name}{" "}
+                  {post.user_id.haveStar ? (
+                    <i className="fa-solid fa-star"></i>
+                  ) : null}
+                </h2>
+                <p>
+                  {new Date(post.created_at).toDateString()}{" "}
+                  {new Date(post.created_at).toTimeString().substring(0, 9)}
+                </p>
+              </div>
             </div>
             <div className="img_content">
               <img
@@ -137,11 +148,11 @@ export const Posts = () => {
               />
             </div>
             <div className="post__mini_options">
-              <i className="fa-regular fa-heart icon"></i>
-              <i className="fa-solid fa-share-nodes icon"></i>
-              <i className="fa-solid fa-link icon"></i>
+              <BiLike className="icon" />
+              <AiOutlineShareAlt className="icon" />
+              <AiOutlineLink className="icon" />
             </div>
-            <p className="posts__mini__likecount">LIKE: {post.like}</p>
+            <p className="posts__mini__likecount">{post.like} Like</p>
             <h3 className="Posts__mini__title">
               <span>{post.user_id.username}</span> {post.title}
             </h3>

@@ -1,8 +1,9 @@
 .Posts {
-  width: 100%;  
-  height: calc(100vh);
-  /* padding-left: 40px; */
+  width: 100%;
+  height: auto;
   display: flex;
+  padding-left: 280px;
   align-items: center;
-  justify-content: center;
+  background: #f5fdff;
+  /* background: #2a788c; */
 }

@@ -1,33 +1,69 @@
 .Posts__mini {
-  width: 400px;
-  margin-left: 40px;
+  width: 600px;
   height: 100%;
-  background-color: #fff;
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #051e3e05;
+  border-right: 1px solid #44444455;
 }
 
 .Posts__mini__post {
-  width: 90%;
+  width: 400px;
   margin: 10px 0;
-  padding: 15px 10px;
-  border-radius: 5px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-  /* border: 1px solid red; */
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 6px;
 }
 .img_content {
   width: 100%;
-  height: 330px;
+  height: 380px;
   display: flex;
   align-items: center;
+  border-radius: 5px;
   justify-content: center;
   overflow: hidden;
+  border: 1px solid #33333377;
 }
 .Posts__mini__image {
   width: 100%;
+  transition: 0.3s ease-in-out;
+}
+
+.Posts__mini__image:hover {
+  transform: scale(1.07);
+  cursor: pointer;
+}
+
+.Posts__mini__profile{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 7px 10px;
+  background-color: #f6cc6168;
+  margin-bottom: 5px;
   border-radius: 5px;
+}
+.Posts__mini__linkusername{
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+.Posts__mini__linkusername h2{
+  font-size: 18px;
+}
+.Posts__mini__linkusername h2 i{
+  font-size: 12px;
+  color: blueviolet;
+}
+.Posts__mini__linkusername p{
+  font-size: 12px;
+}
+.Posts__mini__primages{
+  width: 40px;
+  border-radius: 50%;
 }
 .Posts__mini__title {
   width: 90%;
@@ -37,12 +73,14 @@
   padding: 5px 0;
 }
 .post__mini_options .icon {
-  font-size: 28px;
-  margin-right: 15px;
+  font-size: 26px;
+  margin-right: 10px;
+  color: #000000c4;
+  cursor: pointer;
 }
 .posts__mini__likecount {
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 14px;
+  font-weight: 700;
 }
 .Posts__mini__title {
   font-size: 16px;
