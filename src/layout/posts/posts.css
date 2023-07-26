@@ -1,7 +1,7 @@
 .Posts {
-  width: 100%;
-  height: calc(100vh - 0px);
-  background-color: #fff4e3;
+  width: 100%;  
+  height: calc(100vh);
+  /* padding-left: 40px; */
   display: flex;
   align-items: center;
   justify-content: center;
