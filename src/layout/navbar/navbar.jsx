@@ -4,9 +4,30 @@ import { HiDocumentText } from "react-icons/hi";
 import { FaUsers } from "react-icons/fa";
 import { BiSolidLogIn, BiLogOut } from "react-icons/bi";
 import { ImProfile } from "react-icons/im";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
 export const Navbar = () => {
+  const navigate = useNavigate();
   const userToken = localStorage.getItem("token") || "";
+
+  const handleLogOut = () => {
+    localStorage.removeItem("token");
+
+    toast.warn("You are Log Out!", {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+    });
+
+    setTimeout(() => {
+      navigate("/");
+    }, 1500);
+  };
 
   return (
     <div className="Navbar">
@@ -30,7 +51,7 @@ export const Navbar = () => {
               <ImProfile className="nav__icon" />
               Profile
             </Link>
-            <Link to="/logout" className="Navbar__link">
+            <Link to="/" onClick={handleLogOut} className="Navbar__link">
               <BiLogOut className="nav__icon" />
               Log Out
             </Link>
@@ -48,6 +69,18 @@ export const Navbar = () => {
           </>
         )}
       </div>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
     </div>
   );
 };
