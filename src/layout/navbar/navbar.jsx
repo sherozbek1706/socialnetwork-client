@@ -25,7 +25,7 @@ export const Navbar = () => {
     });
 
     setTimeout(() => {
-      navigate("/");
+      window.location.assign("/");
     }, 1500);
   };
 
