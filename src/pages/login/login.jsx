@@ -44,19 +44,17 @@ export const Login = () => {
       username,
       password,
     };
-
-    console.log(loginUser);
     axiosInstance
       .post("/login", loginUser)
       .then((data) => {
         localStorage.setItem("token", data.data.token);
+        localStorage.setItem("user_id", data.data.id);
         successNotify("You are logged! 🎉🎉🎉");
         setTimeout(() => {
           navigate("/");
         }, 1500);
       })
       .catch((error) => {
-        console.log(error);
         errorNotify(error.response.data.error);
         // navigate("/register");
       });

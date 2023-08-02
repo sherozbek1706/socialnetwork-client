@@ -53,7 +53,6 @@ export const Register = () => {
       password,
     };
 
-    console.log(registerUser);
     axiosInstance
       .post("/register", registerUser)
       .then((data) => {
@@ -63,7 +62,6 @@ export const Register = () => {
         }, 1500);
       })
       .catch((error) => {
-        console.log(error.response.data.error);
         errorNotify(error.response.data.error);
       });
   };

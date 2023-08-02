@@ -94,3 +94,15 @@
   font-size: 14px;
   font-weight: 400;
 }
+.post__hasMore{
+  border: 1px solid #00000090;
+  width: 200px;
+  height: 45px;
+  margin: 10px ;
+  background-color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+.icon-like{
+  color: red;
+}

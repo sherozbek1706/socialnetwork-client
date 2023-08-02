@@ -41,10 +41,10 @@ export const Navbar = () => {
           <HiDocumentText className="nav__icon" />
           Posts
         </a> */}
-        <a href="#" className="Navbar__link">
+        <Link to="/users" className="Navbar__link">
           <FaUsers className="nav__icon" />
           Users
-        </a>
+        </Link>
         {userToken ? (
           <>
             <Link to="/profile" className="Navbar__link">
