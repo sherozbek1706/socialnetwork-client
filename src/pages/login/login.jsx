@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import "./login.css";
 import { axiosInstance } from "../../services";
 import { ToastContainer, toast } from "react-toastify";
@@ -51,7 +51,7 @@ export const Login = () => {
         localStorage.setItem("user_id", data.data.id);
         successNotify("You are logged! 🎉🎉🎉");
         setTimeout(() => {
-          navigate("/");
+          window.location.assign("/");
         }, 1500);
       })
       .catch((error) => {
