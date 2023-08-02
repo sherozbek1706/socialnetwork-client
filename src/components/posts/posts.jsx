@@ -111,7 +111,7 @@ export const Posts = () => {
                 ) : null}
               </h2>
               <p>
-                {new Date(post.created_at).toDateString()}
+                {new Date(post.created_at).toDateString()}{" "}
                 {new Date(post.created_at).toTimeString().substring(0, 9)}
               </p>
             </div>
