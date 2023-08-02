@@ -73,7 +73,21 @@ export const Posts = () => {
     setOffset((pre) => pre + 5);
   };
 
-  if (!data_posts.length) return <h1> Loading... </h1>;
+  if (!data_posts.length)
+    return (
+      <div className="container__spinner">
+        <div class="lds-roller">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    );
 
   return (
     <div className="Posts__mini">
