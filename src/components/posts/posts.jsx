@@ -76,7 +76,7 @@ export const Posts = () => {
   if (!data_posts.length)
     return (
       <div className="container__spinner">
-        <div class="lds-roller">
+        <div className="lds-roller">
           <div></div>
           <div></div>
           <div></div>
