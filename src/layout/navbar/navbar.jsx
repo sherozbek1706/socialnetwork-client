@@ -3,6 +3,7 @@ import { AiFillHome, AiOutlineUserAdd } from "react-icons/ai";
 import { HiDocumentText } from "react-icons/hi";
 import { FaUsers } from "react-icons/fa";
 import { BiSolidLogIn, BiLogOut } from "react-icons/bi";
+import { BsFillPostageHeartFill } from "react-icons/bs";
 import { ImProfile } from "react-icons/im";
 import { Link, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
@@ -44,6 +45,10 @@ export const Navbar = () => {
         <Link to="/users" className="Navbar__link">
           <FaUsers className="nav__icon" />
           Users
+        </Link>
+        <Link to="/top" className="Navbar__link">
+          <BsFillPostageHeartFill className="nav__icon" />
+          Top Posts
         </Link>
         {userToken ? (
           <>
