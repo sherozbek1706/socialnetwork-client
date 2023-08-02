@@ -7,6 +7,7 @@ import { AiOutlineLink, AiOutlineShareAlt } from "react-icons/ai";
 import { BiLike, BiSolidLike } from "react-icons/bi";
 
 import image1 from "../../../public/ghost_icon/1.jpg";
+import { errorNotify } from "../../shared/toastify";
 
 export const Posts = () => {
   const [data_posts, setData_posts] = useState([]);
@@ -43,7 +44,14 @@ export const Posts = () => {
   }, [offset, likeAction]);
 
   const handleLikePost = async (id) => {
-    await axiosInstance.put(`/users/like/posts/${id}`);
+    await axiosInstance.put(`/users/like/posts/${id}`).catch((error) => {
+      console.log(error.response);
+      if (error.response.data.error == "Unauthorized.") {
+        errorNotify("You should login!");
+      } else if (error.response.data.error == "jwt expired") {
+        errorNotify("You must login again!");
+      }
+    });
 
     setLikeAction((pre) => !pre);
   };
@@ -118,7 +126,9 @@ export const Posts = () => {
           <div className="post__mini_options">
             {handleChangeLike(post, post._id)}
             <AiOutlineShareAlt className="icon" />
-            <AiOutlineLink className="icon" />
+            <a target="_blank" href={post.web_link}>
+              <AiOutlineLink className="icon" />
+            </a>
           </div>
           <p className="posts__mini__likecount">{post.like} Like</p>
           <h3 className="Posts__mini__title">
