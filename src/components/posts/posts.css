@@ -36,7 +36,7 @@
   cursor: pointer;
 }
 
-.Posts__mini__profile{
+.Posts__mini__profile {
   width: 100%;
   display: flex;
   align-items: center;
@@ -46,22 +46,22 @@
   margin-bottom: 5px;
   border-radius: 5px;
 }
-.Posts__mini__linkusername{
+.Posts__mini__linkusername {
   display: flex;
   flex-direction: column;
   margin-left: 10px;
 }
-.Posts__mini__linkusername h2{
+.Posts__mini__linkusername h2 {
   font-size: 18px;
 }
-.Posts__mini__linkusername h2 i{
+.Posts__mini__linkusername h2 i {
   font-size: 12px;
   color: blueviolet;
 }
-.Posts__mini__linkusername p{
+.Posts__mini__linkusername p {
   font-size: 12px;
 }
-.Posts__mini__primages{
+.Posts__mini__primages {
   width: 40px;
   border-radius: 50%;
 }
@@ -94,15 +94,22 @@
   font-size: 14px;
   font-weight: 400;
 }
-.post__hasMore{
-  border: 1px solid #00000090;
+.post__hasMore {
+  /* border: 1px solid #00000090; */
+  border: none;
+  border-radius: 10px;
   width: 200px;
   height: 45px;
-  margin: 10px ;
-  background-color: #fff;
+  margin: 10px;
+  background-color: blueviolet;
+  color: #fff;
+  font-size: 17px;
   font-weight: 600;
   cursor: pointer;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
-.icon-like{
+
+.icon-like {
   color: red;
 }
