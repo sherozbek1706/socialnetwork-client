@@ -11,7 +11,7 @@ export const Navbar = () => {
   const userToken = localStorage.getItem("token") || "";
 
   const handleLogOut = () => {
-    localStorage.removeItem("token");
+    localStorage.clear();
 
     toast.warn("You are Log Out!", {
       position: "top-right",
