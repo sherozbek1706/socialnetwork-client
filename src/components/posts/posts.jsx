@@ -123,18 +123,20 @@ export const Posts = () => {
               className="Posts__mini__image"
             />
           </div>
-          <div className="post__mini_options">
-            {handleChangeLike(post, post._id)}
-            <AiOutlineShareAlt className="icon" />
-            <a target="_blank" href={post.web_link}>
-              <AiOutlineLink className="icon" />
-            </a>
+          <div className="Posts__mini__tools">
+            <div className="post__mini_options">
+              {handleChangeLike(post, post._id)}
+              <AiOutlineShareAlt className="icon" />
+              <a target="_blank" href={post.web_link}>
+                <AiOutlineLink className="icon" />
+              </a>
+            </div>
+            <p className="posts__mini__likecount">{post.like} Like</p>
+            <h3 className="Posts__mini__title">
+              <span>{post.user_id.username}</span> {post.title}
+            </h3>
+            <p className="Posts__mini__desc">{post.description}</p>
           </div>
-          <p className="posts__mini__likecount">{post.like} Like</p>
-          <h3 className="Posts__mini__title">
-            <span>{post.user_id.username}</span> {post.title}
-          </h3>
-          <p className="Posts__mini__desc">{post.description}</p>
         </div>
       ))}
       {hasMore ? (
