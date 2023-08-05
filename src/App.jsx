@@ -1,6 +1,6 @@
 import "./App.css";
 import { Routes as Router, Route, Link } from "react-router-dom";
-import { Login, Main, Register } from "./pages/";
+import { CreatePost, Login, Main, Register } from "./pages/";
 
 export const App = () => {
   return (
@@ -9,6 +9,7 @@ export const App = () => {
         <Route exact path="/" element={<Main />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/create-post" element={<CreatePost />} />
         <Route
           path="/users"
           element={

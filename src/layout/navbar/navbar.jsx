@@ -51,10 +51,10 @@ export const Navbar = () => {
           <FaUsers className="nav__icon" />
           Users
         </Link>
-        
+
         {userToken ? (
           <>
-            <Link to="/create" className="Navbar__link">
+            <Link to="/create-post" className="Navbar__link">
               <AiFillPlusSquare className="nav__icon" />
               Create post
             </Link>
