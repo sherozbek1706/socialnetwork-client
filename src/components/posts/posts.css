@@ -52,9 +52,9 @@
   margin-bottom: 5px;
   border-radius: 5px;
 }
-.Posts__mini__tools{
+.Posts__mini__tools {
   width: 100%;
-  padding: 8px ;
+  padding: 8px;
 }
 .Posts__mini__linkusername {
   display: flex;
@@ -63,10 +63,27 @@
 }
 .Posts__mini__linkusername h2 {
   font-size: 18px;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.statics__count {
+  display: inline;
+  font-weight: 700;
+  margin-right: 12px;
 }
 .Posts__mini__linkusername h2 i {
   font-size: 12px;
-  color: blueviolet;
+  padding-left: 5px;
+  color: rgb(187, 255, 0);
+}
+.dontneedhref{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 26px;
+  height: 26px;
 }
 .Posts__mini__linkusername p {
   font-size: 12px;
@@ -81,6 +98,9 @@
 .post__mini_options {
   width: 100%;
   padding: 5px 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 .post__mini_options .icon {
   font-size: 26px;

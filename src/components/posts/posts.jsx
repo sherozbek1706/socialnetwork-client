@@ -5,6 +5,7 @@ import "./loader.css";
 import { axiosInstance } from "../../services";
 import { AiOutlineLink, AiOutlineShareAlt } from "react-icons/ai";
 import { BiLike, BiSolidLike } from "react-icons/bi";
+import { RxEyeOpen } from "react-icons/rx";
 
 import image1 from "../../../public/ghost_icon/1.jpg";
 import { errorNotify } from "../../shared/toastify";
@@ -61,17 +62,23 @@ export const Posts = () => {
 
     if (like) {
       return (
-        <BiSolidLike
-          className="icon icon-like"
-          onClick={() => handleLikePost(postId)}
-        />
+        <>
+          <BiSolidLike
+            className="icon icon-like"
+            onClick={() => handleLikePost(postId)}
+          />
+          <p className="statics__count">{post.like}</p>
+        </>
       );
     } else {
       return (
-        <BiLike
-          className="icon icon-like"
-          onClick={() => handleLikePost(postId)}
-        />
+        <>
+          <BiLike
+            className="icon icon-like"
+            onClick={() => handleLikePost(postId)}
+          />
+          <p className="statics__count">{post.like}</p>
+        </>
       );
     }
   };
@@ -127,11 +134,11 @@ export const Posts = () => {
             <div className="post__mini_options">
               {handleChangeLike(post, post._id)}
               <AiOutlineShareAlt className="icon" />
-              <a target="_blank" href={post.web_link}>
+              <a className="dontneedhref" target="_blank" href={post.web_link}>
                 <AiOutlineLink className="icon" />
               </a>
             </div>
-            <p className="posts__mini__likecount">{post.like} Like</p>
+            <p className="posts__mini__likecount">{post.view || 0} views</p>
             <h3 className="Posts__mini__title">
               <span>{post.user_id.username}</span> {post.title}
             </h3>
