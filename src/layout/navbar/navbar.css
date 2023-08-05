@@ -7,7 +7,8 @@
   width: 280px;
   height: 100%;
   padding: 0 20px;
-  background: #fff;
+  /* background: #fff; */
+  background-color: #020209;
   border-right: 1px solid #44444455;
 }
 .Navbar__logo {
@@ -22,9 +23,9 @@
   padding-left: 10px;
 }
 .nav__icon {
-  font-size: 25px;
-  margin-right: 10px;
-  color: #000;
+  font-size: 22px;
+  margin-right: 8px;
+  color: #fff;
 }
 .Navbar__nav {
   width: 100%;
@@ -33,21 +34,32 @@
   flex-direction: column;
   margin-top: 40px;
 }
-.Navbar__nav .Navbar__link {
-  width: 100%;
+.Navbar__link {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  margin: 3px;
+  width: 220px;
+  color: #fff;
   padding: 10px 0;
-  border-radius: 3px;
-  padding-left: 10px;
-  font-size: 20px;
-  color: black;
-  font-weight: 700;
-  letter-spacing: -0.5px;
-  transition: .5s ease-in-out;
+  font-size: 17px;
+  font-weight: 600;
+  padding-left: 28px;
+  border-radius: 10px;
+  letter-spacing: -0.4px;
+  font-family: "Poppins";
+  text-transform: uppercase;
+  border: 2px solid #502be26f;
+  transition: 0.5s ease-in-out;
+  box-shadow: #502be2 0px 50px 100px -20px, #502be2 0px 30px 60px -30px;
 }
 
-.Navbar__nav .Navbar__link:hover{
-  background-color: #66666655;
+.Navbar__logout {
+  position: absolute;
+  bottom: 10px;
+  width: 220px;
+}
+
+.Navbar__link:hover {
+  background: #502be2;
 }

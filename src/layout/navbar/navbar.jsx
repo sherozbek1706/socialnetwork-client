@@ -4,7 +4,8 @@ import { HiDocumentText } from "react-icons/hi";
 import { FaUsers } from "react-icons/fa";
 import { BiSolidLogIn, BiLogOut } from "react-icons/bi";
 import { BsFillPostageHeartFill } from "react-icons/bs";
-import { ImProfile } from "react-icons/im";
+import { SiYoutubestudio } from "react-icons/si";
+import { CgProfile } from "react-icons/cg";
 import { Link, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 export const Navbar = () => {
@@ -42,21 +43,26 @@ export const Navbar = () => {
           <HiDocumentText className="nav__icon" />
           Posts
         </a> */}
+        <Link to="/top" className="Navbar__link">
+          <SiYoutubestudio className="nav__icon" />
+          Top Posts
+        </Link>
         <Link to="/users" className="Navbar__link">
           <FaUsers className="nav__icon" />
           Users
         </Link>
-        <Link to="/top" className="Navbar__link">
-          <BsFillPostageHeartFill className="nav__icon" />
-          Top Posts
-        </Link>
+        
         {userToken ? (
           <>
             <Link to="/profile" className="Navbar__link">
-              <ImProfile className="nav__icon" />
+              <CgProfile className="nav__icon" />
               Profile
             </Link>
-            <Link to="/" onClick={handleLogOut} className="Navbar__link">
+            <Link
+              to="/"
+              onClick={handleLogOut}
+              className="Navbar__link Navbar__logout"
+            >
               <BiLogOut className="nav__icon" />
               Log Out
             </Link>
@@ -65,14 +71,22 @@ export const Navbar = () => {
           <>
             <Link to="/login" className="Navbar__link">
               <BiSolidLogIn className="nav__icon" />
-              Login
+              Sign in
             </Link>
             <Link to="/register" className="Navbar__link">
               <AiOutlineUserAdd className="nav__icon" />
-              Register
+              Sign up
             </Link>
           </>
         )}
+        {/* <Link
+          to="/"
+          onClick={handleLogOut}
+          className="Navbar__link Navbar__logout"
+        >
+          <BiLogOut className="nav__icon" />
+          Log Out
+        </Link> */}
       </div>
       <ToastContainer
         position="top-right"
