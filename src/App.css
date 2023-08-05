@@ -6,7 +6,9 @@
   outline: none;
   font-family: "Hanken Grotesk", "Poppins", "Merriweather", sans-serif;
 }
-
+body{
+  background-color: #020209;
+}
 /* 
 
 font-family: 'Hanken Grotesk', sans-serif;
