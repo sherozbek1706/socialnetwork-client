@@ -2,6 +2,84 @@
   margin-left: 280px;
   width: 600px;
   height: 100%;
-  background-color: #000;
+  /* background-color: #fff; */
   border: 1px solid rgba(80, 43, 226, 0.181);
+}
+.FormCreatePost__form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 20px 15px;
+}
+.FormCreatePost__title{
+  font-size: 34px;
+  font-weight: 800;
+  font-family: "Poppins";
+  color: #502be2;
+  text-shadow: 2px 2px 26px rgba(80,43,226,0.5);
+}
+
+.FormCreatePost__description{
+  font-size: 14px;
+  width: 65%;
+  text-align: center;
+  font-weight: 500;
+  font-family: "Poppins";
+  margin-bottom: 40px;
+  color: #fff;
+  text-shadow: 2px 2px 26px rgb(255,255,255);
+}
+.FormCreatePost__main-style{
+  width: 100%;
+  height: 40px;
+  margin: 10px 0;
+  padding-left:20px ;
+  font-family: "Poppins";
+  font-weight: 500;
+  border-radius: 6px;
+  border: none;
+  background:#502be215 ;
+  border: 2px solid #502be26f;
+  color: #fff;
+  box-shadow: rgba(16, 23, 225, 0.15) 0px 3px 3px 0px;
+}
+.FormCreatePost__file-input{
+  display: none;
+}
+
+.FormCreatePost__file-label{
+  width: 100%;
+  height: 40px;
+  font-weight: 600;
+  background-color: yellow;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.FormCreatePost__file-label-icon{
+  font-size: 24px;
+  margin: 0 10px;
+}
+.FormCreatePost__textarea{
+  resize: none;
+  height: 180px;
+  padding: 15px 20px;
+}
+.FormCreatePost__button{
+  width: 250px;
+  height: 60px;
+  margin-top: 20px;
+  border-radius: 8px;
+  background: #502be2;
+  border: 2px solid #502be26f;
+  color: #fff;
+  box-shadow: rgba(16, 23, 225, 0.15) 0px 3px 3px 0px;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
 }
