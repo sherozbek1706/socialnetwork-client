@@ -6,12 +6,12 @@ import { BiSolidLogIn, BiLogOut } from "react-icons/bi";
 import { BsPlusSquareFill } from "react-icons/bs";
 import { SiYoutubestudio } from "react-icons/si";
 import { CgProfile } from "react-icons/cg";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 export const Navbar = () => {
+  const location = useLocation();
   const navigate = useNavigate();
   const userToken = localStorage.getItem("token") || "";
-
   const handleLogOut = () => {
     localStorage.clear();
 
@@ -35,7 +35,12 @@ export const Navbar = () => {
     <div className="Navbar">
       <h1 className="Navbar__logo">My Projects</h1>
       <div className="Navbar__nav">
-        <Link to="/" className="Navbar__link">
+        <Link
+          to="/"
+          className={`Navbar__link + ${
+            location.pathname == "/" ? "active" : ""
+          }`}
+        >
           <AiFillHome className="nav__icon" />
           Home
         </Link>
@@ -54,7 +59,12 @@ export const Navbar = () => {
 
         {userToken ? (
           <>
-            <Link to="/create-post" className="Navbar__link">
+            <Link
+              to="/create-post"
+              className={`Navbar__link + ${
+                location.pathname == "/create-post" ? "active" : ""
+              }`}
+            >
               <AiFillPlusSquare className="nav__icon" />
               Create post
             </Link>

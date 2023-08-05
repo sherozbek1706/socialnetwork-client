@@ -60,6 +60,9 @@
   width: 220px;
 }
 
+.Navbar__nav .active {
+  background: #502be2;
+}
 .Navbar__link:hover {
   background: #502be2;
 }
