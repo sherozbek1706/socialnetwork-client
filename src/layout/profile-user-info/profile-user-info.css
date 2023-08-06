@@ -50,12 +50,19 @@
   font-weight: 500;
   letter-spacing: -0.5px;
 }
-.ProfileUserInfo__photo {
+.ProfileUserInfo__imgcontent {
   width: 120px;
-  margin: 0;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
   border-radius: 12px;
-  
   box-shadow: #502be2 0px 50px 1500px -20px, #502be2 0px 30px 1500px -30px;
+}
+
+.ProfileUserInfo__photo {
+  width: 100%;
 }
 .ProfileUserInfo__options {
   /* border: 1px solid #fff; */
@@ -75,10 +82,10 @@
   border-radius: 8px;
   font-size: 13px;
   display: flex;
-  align-items:center;
+  align-items: center;
   box-shadow: rgba(16, 23, 225, 0.15) 0px 3px 3px 0px;
 }
-.ProfileUserInfo__selecticon{
+.ProfileUserInfo__selecticon {
   font-size: 16px;
   margin-right: 5px;
   color: yellow;

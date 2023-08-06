@@ -9,11 +9,13 @@ export const ProfileUserInfo = ({ data }) => {
         Profile <span>#{data.username}</span>
       </h1>
       <div className="ProfileUserInfo__user">
-        <img
-          className="ProfileUserInfo__photo"
-          src={`${api}${data.image}`}
-          alt=""
-        />
+        <div className="ProfileUserInfo__imgcontent">
+          <img
+            className="ProfileUserInfo__photo"
+            src={`${api}${data.image}`}
+            alt=""
+          />
+        </div>
         <div className="ProfileUserInfo__userinfo">
           <p className="ProfileUserInfo__fullname">
             {data.first_name} {data.last_name}
