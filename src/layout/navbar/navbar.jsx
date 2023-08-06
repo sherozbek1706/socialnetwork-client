@@ -68,7 +68,12 @@ export const Navbar = () => {
               <AiFillPlusSquare className="nav__icon" />
               Create post
             </Link>
-            <Link to="/profile" className="Navbar__link">
+            <Link
+              to="/profile"
+              className={`Navbar__link + ${
+                location.pathname == "/profile" ? "active" : ""
+              }`}
+            >
               <CgProfile className="nav__icon" />
               Profile
             </Link>

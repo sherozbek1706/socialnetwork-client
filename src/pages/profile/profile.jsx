@@ -1,8 +1,9 @@
+import { Navbar } from "../../layout";
 import "./profile.css";
 export const Profile = () => {
   return (
-    <div>
-      <h1>Profile</h1>
+    <div className="Profile">
+      <Navbar />
     </div>
   );
 };
