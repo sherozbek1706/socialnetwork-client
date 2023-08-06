@@ -1,0 +1,29 @@
+.ProfileUserInfo{
+  width: 100%;
+}
+.ProfileUserInfo__title{
+  color: blueviolet;
+}
+
+.ProfileUserInfo__title {
+  font-size: 34px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-family: "Poppins";
+  color: #502be2;
+  text-shadow: 2px 2px 26px rgba(80,43,226,0.5);
+}
+
+.ProfileUserInfo__title span {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  text-transform: none;
+  padding: 20px;
+  font-family: 'Hanken Grotesk';
+  color: #fff;
+  text-shadow: 2px 2px 26px rgb(255,255,255);
+}
+
+/* text-shadow: 2px 2px 26px rgb(255,255,255); */

@@ -2,6 +2,7 @@
   margin-left: 280px;
   width: 600px;
   height: 100%;
-  /* background-color: #fff; */
+  padding: 15px 10px;
   border: 1px solid rgba(80, 43, 226, 0.181);
 }
+
