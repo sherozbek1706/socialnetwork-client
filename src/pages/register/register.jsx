@@ -11,6 +11,7 @@ export const Register = () => {
   const emailRef = useRef(null);
   const usernameRef = useRef(null);
   const passwordRef = useRef(null);
+  const imageRef = useRef(null);
 
   const errorNotify = (msg) =>
     toast.error(msg, {
@@ -36,8 +37,25 @@ export const Register = () => {
       theme: "colored",
     });
 
+  const handleChangeFileInput = () => {
+    let doc = document.querySelector(".login-register-label");
+    console.log(doc);
+    if (imageRef.current.files[0]) {
+      doc.textContent = imageRef.current.files[0].name;
+    } else {
+      doc.innerHTML = `<MdOutlineAddPhotoAlternate className="FormCreatePost__file-label-icon" />
+        Choose a Photo`;
+    }
+  };
+
   const handleRegister = (e) => {
     e.preventDefault();
+    const formData = new FormData();
+
+    if (!imageRef.current.files[0]) {
+      errorNotify("You must choose a Photo");
+      return;
+    }
 
     let first_name = firstNameRef.current.value;
     let last_name = lastNameRef.current.value;
@@ -45,16 +63,19 @@ export const Register = () => {
     let username = usernameRef.current.value;
     let password = passwordRef.current.value;
 
-    let registerUser = {
-      first_name,
-      last_name,
-      email,
-      username,
-      password,
-    };
+    formData.append("first_name", first_name);
+    formData.append("last_name", last_name);
+    formData.append("email", email);
+    formData.append("username", username);
+    formData.append("password", password);
+    formData.append("image", imageRef.current.files[0]);
 
     axiosInstance
-      .post("/register", registerUser)
+      .post("/register", formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      })
       .then((data) => {
         successNotify("You are register! 🎉🎉🎉");
         setTimeout(() => {
@@ -91,6 +112,18 @@ export const Register = () => {
             <input type="password" ref={passwordRef} required />
             <label>Password</label>
           </div>
+          <input
+            type="file"
+            id="inputField"
+            ref={imageRef}
+            name="image"
+            className="login-register-file"
+            onChange={handleChangeFileInput}
+            accept="image/*"
+          />
+          <label htmlFor="inputField" className="login-register-label">
+            Choose a Photo
+          </label>
           <button type="submit">Register</button>
         </form>
         <p>

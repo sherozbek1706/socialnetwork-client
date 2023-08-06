@@ -128,6 +128,10 @@
   color: #fff;
 }
 
+.login-register-file {
+  display: none;
+}
+
 .login-register small {
   display: block;
   margin-top: 15px;
