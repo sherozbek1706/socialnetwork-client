@@ -108,7 +108,13 @@ export const Posts = () => {
       {data_posts.map((post) => (
         <div className="Posts__mini__post" key={post._id}>
           <div className="Posts__mini__profile">
-            <img src={image1} className="Posts__mini__primages" alt="" />
+            <div className="Posts__mini__profile__content">
+              <img
+                src={`${api}${post.user_id.image}`}
+                className="Posts__mini__primages"
+                alt=""
+              />
+            </div>
             <div className="Posts__mini__linkusername">
               <h2>
                 {post.user_id.first_name} {post.user_id.last_name}

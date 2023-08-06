@@ -89,9 +89,17 @@
 .Posts__mini__linkusername p {
   font-size: 12px;
 }
+.Posts__mini__profile__content{
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
 .Posts__mini__primages {
   width: 40px;
-  border-radius: 50%;
 }
 .Posts__mini__title {
   width: 90%;
