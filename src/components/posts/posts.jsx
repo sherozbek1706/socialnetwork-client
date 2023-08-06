@@ -142,7 +142,11 @@ export const Posts = () => {
             <h3 className="Posts__mini__title">
               <span>{post.user_id.username}</span> {post.title}
             </h3>
-            <p className="Posts__mini__desc">{post.description}</p>
+            <p className="Posts__mini__desc">
+              {post.description.length > 130
+                ? `${post.description.substring(0, 130)} ...`
+                : post.description}{" "}
+            </p>
           </div>
         </div>
       ))}
