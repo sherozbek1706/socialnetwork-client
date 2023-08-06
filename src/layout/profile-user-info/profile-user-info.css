@@ -1,18 +1,15 @@
-.ProfileUserInfo{
+.ProfileUserInfo {
   width: 100%;
 }
-.ProfileUserInfo__title{
-  color: blueviolet;
-}
-
 .ProfileUserInfo__title {
+  margin-left: 15px;
   font-size: 34px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: -1px;
   font-family: "Poppins";
   color: #502be2;
-  text-shadow: 2px 2px 26px rgba(80,43,226,0.5);
+  text-shadow: 2px 2px 26px rgba(80, 43, 226, 0.5);
 }
 
 .ProfileUserInfo__title span {
@@ -21,10 +18,68 @@
   letter-spacing: -1px;
   text-transform: none;
   padding: 20px;
-  font-family: 'Hanken Grotesk';
+  font-family: "Hanken Grotesk";
   color: #fff;
-  text-shadow: 2px 2px 26px rgb(255,255,255);
+  text-shadow: 2px 2px 26px rgb(255, 255, 255);
+}
+.ProfileUserInfo__user {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.ProfileUserInfo__userinfo {
+  width: 300px;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 10px 20px;
 }
 .ProfileUserInfo__fullname {
   color: #fff;
+  font-size: 23px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  font-family: "Poppins";
+}
+.ProfileUserInfo__email {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+}
+.ProfileUserInfo__photo {
+  width: 120px;
+  margin: 0;
+  border-radius: 12px;
+  
+  box-shadow: #502be2 0px 50px 1500px -20px, #502be2 0px 30px 1500px -30px;
+}
+.ProfileUserInfo__options {
+  /* border: 1px solid #fff; */
+  width: 300px;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.ProfileUserInfo__select {
+  padding: 7px 12px;
+  font-weight: 600;
+  background: #502be215;
+  margin-right: 10px;
+  border: 2px solid #502be26f;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 13px;
+  display: flex;
+  align-items:center;
+  box-shadow: rgba(16, 23, 225, 0.15) 0px 3px 3px 0px;
+}
+.ProfileUserInfo__selecticon{
+  font-size: 16px;
+  margin-right: 5px;
+  color: yellow;
 }
