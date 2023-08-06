@@ -124,7 +124,7 @@ export const Posts = () => {
           </div>
           <div className="img_content">
             <img
-              src={`${api}files/post/${post.image}`}
+              src={`${api}${post.image}`}
               alt=""
               className="Posts__mini__image"
             />
