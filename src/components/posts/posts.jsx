@@ -5,7 +5,6 @@ import "./loader.css";
 import { axiosInstance } from "../../services";
 import { AiOutlineLink, AiOutlineShareAlt } from "react-icons/ai";
 import { BiLike, BiSolidLike } from "react-icons/bi";
-import { RxEyeOpen } from "react-icons/rx";
 
 import image1 from "../../../public/ghost_icon/1.jpg";
 import { errorNotify } from "../../shared/toastify";
@@ -24,7 +23,7 @@ export const Posts = () => {
         let res;
         let data;
         if (mode) {
-          res = await axiosInstance.get(`/posts?limit=5&offset=${offset}`);
+          res = await axiosInstance.get(`/posts?limit=10&offset=${offset}`);
           data = await res.data.data;
           setData_posts((pre) => [...pre, ...data]);
           setMode(false);
@@ -32,7 +31,7 @@ export const Posts = () => {
             setHasMore(false);
           }
         } else {
-          res = await axiosInstance.get(`/posts?limit=${5 + offset}`);
+          res = await axiosInstance.get(`/posts?limit=${10 + offset}`);
           data = await res.data.data;
           setData_posts(data);
         }
@@ -85,7 +84,7 @@ export const Posts = () => {
 
   const handleChangeLimit = () => {
     setMode(true);
-    setOffset((pre) => pre + 5);
+    setOffset((pre) => pre + 10);
   };
 
   if (!data_posts.length)
