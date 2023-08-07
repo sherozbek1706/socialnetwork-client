@@ -11,6 +11,7 @@ export const App = () => {
         <Route path="/register" element={<Register />} />
         <Route path="/create-post" element={<CreatePost />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/profile/:id" element={<Profile />} />
         <Route
           path="/users"
           element={

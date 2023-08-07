@@ -90,3 +90,7 @@
   margin-right: 5px;
   color: yellow;
 }
+.active__star {
+  border: 2px solid #f7ff026f;
+  box-shadow: rgba(255, 191, 0, 0.15) 0px 3px 3px 0px;
+}
