@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { axiosInstance } from "../../services";
 import { successNotify, errorNotify } from "../../shared/toastify";
 import { MdOutlineAddPhotoAlternate } from "react-icons/md";
-
+import { LogOut } from "../../shared/logout/logout";
 export const FormCreatePost = () => {
   const navigate = useNavigate();
   const titleRef = useRef();
@@ -53,7 +53,11 @@ export const FormCreatePost = () => {
           navigate("/");
         }, 2000);
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        if (err.response.status == 401) {
+          LogOut();
+        }
+      });
   };
 
   return (

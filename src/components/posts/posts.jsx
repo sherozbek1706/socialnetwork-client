@@ -7,6 +7,7 @@ import { AiOutlineLink, AiOutlineShareAlt } from "react-icons/ai";
 import { BiLike, BiSolidLike } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import { errorNotify } from "../../shared/toastify";
+import { LogOut } from "../../shared/logout/logout";
 
 export const Posts = () => {
   const [data_posts, setData_posts] = useState([]);
@@ -49,6 +50,9 @@ export const Posts = () => {
         errorNotify("You should login!");
       } else if (error.response.data.error == "jwt expired") {
         errorNotify("You must login again!");
+        if (error.response.status == 401) {
+          LogOut();
+        }
       }
     });
 
