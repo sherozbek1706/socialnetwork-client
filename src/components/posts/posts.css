@@ -53,6 +53,9 @@
   margin-bottom: 5px;
   border-radius: 5px;
 }
+.Posts__mini__post__profile__link{
+  color: #fff;
+}
 .Posts__mini__tools {
   width: 100%;
   padding: 8px;
